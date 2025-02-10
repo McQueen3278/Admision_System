@@ -151,7 +151,7 @@ export const deleteCourse = async (req, res) => {
     }
 };
 
-//Asignar Estudiante
+//Asignar Estudiante- apartado para asignar un estudiante a un curso y listarlo
 
 export const assignStudentToCourse = async (req, res) => {
     const { studentId, courseId } = req.body;
