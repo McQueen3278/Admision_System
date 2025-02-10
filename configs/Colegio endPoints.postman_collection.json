@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "7381b6e9-1d58-480a-9472-924f4da80674",
+		"name": "Colegio endPoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37604997"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Studdent_Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Adrian\",\r\n    \"surname\": \"Morataya\",\r\n    \"username\": \"Amorataya\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"ssoto@gmail.coom\",\r\n    \"carnet\": \"20232147\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/auth/registerStuddent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"auth",
+								"registerStuddent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Professor_Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Braulio\",\r\n    \"surname\": \"Echeverria\",\r\n    \"username\": \"Becheverria\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"Becheverria@gmail.coom\",\r\n    \"carnet\": \"20232148\",\r\n    \"role\": \"PROFESSOR_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/auth/registerProfessor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"auth",
+								"registerProfessor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Professor",
+			"item": [
+				{
+					"name": "Listar _Profesores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/professor/getProfessor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"professor",
+								"getProfessor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updatre_Profesor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Braulio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/professor/updateProfessor/67a92f3380bd4542eb2bd6f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"professor",
+								"updateProfessor",
+								"67a92f3380bd4542eb2bd6f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/professor/updatePassword/67a92f3380bd4542eb2bd6f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"professor",
+								"updatePassword",
+								"67a92f3380bd4542eb2bd6f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Profesor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/professor/deleteProfessor/67a92f3380bd4542eb2bd6f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"professor",
+								"deleteProfessor",
+								"67a92f3380bd4542eb2bd6f0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Studdents",
+			"item": [
+				{
+					"name": "Listar_Estudiantes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar_studdent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/studdent/findStuddent/67a92e3380bd4542eb2bd6eb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"studdent",
+								"findStuddent",
+								"67a92e3380bd4542eb2bd6eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/studdent/updatePassword/67a92e3380bd4542eb2bd6eb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"studdent",
+								"updatePassword",
+								"67a92e3380bd4542eb2bd6eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Studdent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Steven\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/studdent/updateStuddent/67a92e3380bd4542eb2bd6eb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"studdent",
+								"updateStuddent",
+								"67a92e3380bd4542eb2bd6eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/studdent/deleteStuddent/67a92e3380bd4542eb2bd6eb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"studdent",
+								"deleteStuddent",
+								"67a92e3380bd4542eb2bd6eb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Crear_Curso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5M2ZhZThlNjJmZDM0MDBiYTFjOTciLCJyb2xlIjoiUFJPRkVTU09SX1JPTEUiLCJpYXQiOjE3MzkxNTIyNjksImV4cCI6MTczOTE1NTg2OX0.CKBCmix9uj06CIys6aHQ-0BZrJxVq43suClPoCF9tSk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Taller 3\",\r\n    \"description\": \"JavaScript\",\r\n    \"professorId\": \"67a93fae8e62fd3400ba1c97\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/course/createCourse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"course",
+								"createCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar_cursos_profesor",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update_course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5M2ZhZThlNjJmZDM0MDBiYTFjOTciLCJyb2xlIjoiUFJPRkVTU09SX1JPTEUiLCJpYXQiOjE3MzkxNTIyNjksImV4cCI6MTczOTE1NTg2OX0.CKBCmix9uj06CIys6aHQ-0BZrJxVq43suClPoCF9tSk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Taller 6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/course/update/67a95bc4ee8e22f438823b10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"course",
+								"update",
+								"67a95bc4ee8e22f438823b10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/admitionSystem/v1/course/delete/67a95bc4ee8e22f438823b10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admitionSystem",
+								"v1",
+								"course",
+								"delete",
+								"67a95bc4ee8e22f438823b10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asignarse",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Liastar_estudiantes_curso",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

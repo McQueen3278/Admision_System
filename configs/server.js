@@ -6,6 +6,9 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
+import studdentRoutes from "../src/Student/studdent.routes.js"
+import professorRoutes from "../src/Professor/professor.routes.js"
+import courseRoutes from "../src/course/course.routes.js"
 import apiLimiter from "../src/middlewares/validar-peticiones.js"
 
 const middlewares = (app) => {
@@ -18,7 +21,10 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-    app.use("/admitionSystem/v1/auth", authRoutes)
+    app.use("/admitionSystem/v1/auth", authRoutes),
+    app.use("/admitionSystem/v1/studdent", studdentRoutes),
+    app.use("/admitionSystem/v1/professor", professorRoutes),
+    app.use("/admitionSystem/v1/course", courseRoutes)
 }
 
 const conectarDB = async () =>{
